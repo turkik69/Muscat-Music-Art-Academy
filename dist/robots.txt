@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://muscat-music-art-academy-2026.turki-k69.chatgpt.site/sitemap.xml
