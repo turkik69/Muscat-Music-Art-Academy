@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://byyassmin.com/Muscat-Music-Art-Academy/sitemap.xml

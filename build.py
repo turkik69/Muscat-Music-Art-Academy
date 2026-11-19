@@ -79,9 +79,9 @@ def section_intro(kicker, title, summary=""):
 
 def founder_feature(lang, compact=False):
     if lang=='ar':
-        kicker='المؤسِّسة والرئيس التنفيذي'; name='معالي الدكتورة شريفة بنت خلفان بن ناصر اليحيائية'; role='وزيرة التنمية الاجتماعية سابقًا · أكاديمية وباحثة عُمانية'
+        kicker='المؤسس والرئيس التنفيذي'; name='معالي الدكتورة شريفة بنت خلفان بن ناصر اليحيائية'; role='وزيرة التنمية الاجتماعية سابقًا · أكاديمية وباحثة عُمانية'
         bio='تقود الدكتورة شريفة أكاديمية مسقط للموسيقى والفنون منذ تأسيسها عام 2019. تمتد مسيرتها بين التعليم والبحث والعمل الوطني، وتضع تنمية المواهب الفنية في صميم رحلة الأكاديمية.'
-        cta='اقرأ سيرة المؤسِّسة'; alt='صورة شخصية للدكتورة شريفة اليحيائية'
+        cta='اقرأ سيرة المؤسس'; alt='صورة شخصية للدكتورة شريفة اليحيائية'
     else:
         kicker='FOUNDER & CHIEF EXECUTIVE OFFICER'; name='H.E. Dr Sharifa bint Khalfan bin Nasser Al Yahyai'; role='Former Minister of Social Development · Omani academic and researcher'
         bio='Dr Sharifa has led Muscat Music & Art Academy since its founding in 2019. Her career spans education, research and national service, with a focus on creating opportunities for emerging artistic talent.'
@@ -118,8 +118,8 @@ def about(lang):
         intro='منذ تأسيسها عام 2019، تعمل الأكاديمية على تقديم تعليم الموسيقى والفنون والحركة للأطفال والكبار، وتربط التعلم بالممارسة والظهور الفني.'
         vision='أن يجد كل متعلم مدخلًا مناسبًا للفن، ومساحة يطور فيها قدراته وثقته ويشارك أثره مع المجتمع.'
         mission='تقديم مسارات تعليمية فنية منظمة تشجع على التجربة والتدريب المستمر، وتفتح أبواب التواصل مع المؤسسات الثقافية والتعليمية.'
-        founder_title='من التعليم والخدمة العامة إلى تأسيس الأكاديمية'; degree='المؤهلات الأكاديمية'; mile='محطات المسيرة'; message='رسالة المؤسِّسة'; message_body='تسعى الأكاديمية إلى إتاحة فرصة حقيقية لاكتشاف الموهبة وصقلها، وأن يكون تعليم الفن جزءًا من بناء الإنسان وحضوره في المجتمع.'
-        note='هذه صياغة تعريفية مستندة إلى أنشطة الأكاديمية، وليست اقتباسًا مباشرًا من المؤسِّسة.'
+        founder_title='من التعليم والخدمة العامة إلى تأسيس الأكاديمية'; degree='المؤهلات الأكاديمية'; mile='محطات المسيرة'; message='رسالة المؤسس'; message_body='تسعى الأكاديمية إلى إتاحة فرصة حقيقية لاكتشاف الموهبة وصقلها، وأن يكون تعليم الفن جزءًا من بناء الإنسان وحضوره في المجتمع.'
+        note='هذه صياغة تعريفية مستندة إلى أنشطة الأكاديمية، وليست اقتباسًا مباشرًا من المؤسس.'
         degrees=[('1992','بكالوريوس اللغة العربية وآدابها، جامعة السلطان قابوس'),('1995','ماجستير الأدب الحديث، جامعة السلطان قابوس'),('2001','دكتوراه دراسات اللغة العربية والشرق الأوسط، جامعة ليدز')]
         milestones=[('2004–2011','وزيرة التنمية الاجتماعية في سلطنة عُمان'),('2018','جائزة المرأة العربية عن الإنجاز في التنمية الاجتماعية'),('2019','تأسيس أكاديمية مسقط للموسيقى والفنون'),('2025','توقيع برنامج تعاون مع المتحف الوطني')]
         sources='مصادر السيرة والمعلومات'; slogan='رؤيتنا'; mlabel='رسالتنا'
@@ -136,7 +136,7 @@ def about(lang):
     def timeline(rows): return ''.join(f'<li><strong>{year}</strong><span>{value}</span></li>' for year,value in rows)
     return f'''<section class="page-banner"><div class="container"><span class="eyebrow">{'OUR STORY' if lang=='en' else 'قصتنا'}</span><h1>{heading}</h1><p>{sub}</p></div></section>
 <section class="section"><div class="container about-opening"><p class="large-copy">{intro}</p><div class="principles"><div><span>01</span><h2>{slogan}</h2><p>{vision}</p></div><div><span>02</span><h2>{mlabel}</h2><p>{mission}</p></div></div></div></section>
-<section class="section founder-page"><div class="container"><div class="founder-page-head">{section_intro('FOUNDER / المؤسِّسة',founder_title)}</div>{founder_feature(lang)}</div></section>
+<section class="section founder-page"><div class="container"><div class="founder-page-head">{section_intro('FOUNDER / المؤسس',founder_title)}</div>{founder_feature(lang)}</div></section>
 <section class="section biography"><div class="container bio-grid"><div><span class="eyebrow">{degree}</span><ol class="timeline">{timeline(degrees)}</ol></div><div><span class="eyebrow">{mile}</span><ol class="timeline">{timeline(milestones)}</ol></div></div><div class="container founder-quote"><span class="eyebrow">{message}</span><p>{message_body}</p><small>{note}</small></div><div class="container sources"><strong>{sources}</strong>{source_link('museum','National Museum')}{source_link('award','Arab Women Awards')}{source_link('education','Education & career')}</div></section>'''
 
 def programs(lang):
@@ -197,7 +197,7 @@ def privacy(lang):
 
 PAGES = {"index":home,"about":about,"programs":programs,"admissions":admissions,"news":news,"contact":contact,"privacy":privacy}
 DESCRIPTIONS = {
-    "ar": {"index":"أكاديمية مسقط للموسيقى والفنون: تعليم الموسيقى والفنون البصرية والباليه في شاطئ القرم، مسقط.","about":"تعرف إلى أكاديمية مسقط للموسيقى والفنون ومؤسستها الدكتورة شريفة اليحيائية.","programs":"استكشف مجالات الموسيقى والفنون البصرية والباليه والحركة في أكاديمية مسقط.","admissions":"خطوات الاستفسار والالتحاق بأكاديمية مسقط للموسيقى والفنون.","news":"أخبار وشراكات أكاديمية مسقط للموسيقى والفنون.","contact":"تواصل مع أكاديمية مسقط للموسيقى والفنون في شاطئ القرم.","privacy":"كيفية التعامل مع بيانات الاستفسارات في موقع أكاديمية مسقط للموسيقى والفنون."},
+    "ar": {"index":"أكاديمية مسقط للموسيقى والفنون: تعليم الموسيقى والفنون البصرية والباليه في شاطئ القرم، مسقط.","about":"تعرف إلى أكاديمية مسقط للموسيقى والفنون ومؤسسها الدكتورة شريفة اليحيائية.","programs":"استكشف مجالات الموسيقى والفنون البصرية والباليه والحركة في أكاديمية مسقط.","admissions":"خطوات الاستفسار والالتحاق بأكاديمية مسقط للموسيقى والفنون.","news":"أخبار وشراكات أكاديمية مسقط للموسيقى والفنون.","contact":"تواصل مع أكاديمية مسقط للموسيقى والفنون في شاطئ القرم.","privacy":"كيفية التعامل مع بيانات الاستفسارات في موقع أكاديمية مسقط للموسيقى والفنون."},
     "en": {"index":"Music, visual arts and ballet learning at Muscat Music & Art Academy, Shatti Al Qurum.","about":"Learn about Muscat Music & Art Academy and its founder Dr Sharifa Al Yahyai.","programs":"Explore music, visual arts, ballet and movement learning in Muscat.","admissions":"How to enquire about joining Muscat Music & Art Academy.","news":"News and partnerships of Muscat Music & Art Academy.","contact":"Contact Muscat Music & Art Academy in Shatti Al Qurum.","privacy":"How admissions enquiries are handled on the academy website."},
 }
 

@@ -41,13 +41,11 @@ screen; this is a website shortcut, not a native App Store application.
 
 ## GitHub Pages
 
-The `dist/` directory is the deployable root. The included Pages workflow
-builds for the repository's GitHub Pages project path and publishes from the
-default branch after GitHub Pages is enabled in repository settings with
-**GitHub Actions** as the source. The checked-in `dist/` uses the private
-review Site. When connecting an academy domain, update `GH_PAGES_BASE` in the
-workflow and `BASE` in `build.py` to the exact domain, and rebuild.
+GitHub Pages is set to deploy the `main` branch from the repository root.
+Run `python3 pages_prepare.py` after editing content: it regenerates `dist/`
+for the private review Site and the root pages for the current temporary URL,
+`https://byyassmin.com/Muscat-Music-Art-Academy/`. Commit both outputs.
+When the academy domain is assigned, set `GH_PAGES_BASE` to its exact HTTPS
+URL and update `BASE` in `build.py`, then rebuild and update the Pages domain
+setting. `dist/` continues to be the static output for the private Site.
 
-Before attaching the academy's own domain, update `BASE` in `build.py` and
-rebuild so the sitemap, language alternates, and social metadata use that
-domain.
