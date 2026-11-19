@@ -25,12 +25,12 @@ NAV = {
 TEXT = {
     "ar": {
         "brand": "أكاديمية مسقط للموسيقى والفنون", "tag": "MUSCAT MUSIC & ART ACADEMY", "apply": "استفسر عن الالتحاق", "skip": "انتقل إلى المحتوى",
-        "footer": "حيث يلتقي التعليم بالموسيقى والفنون في مسقط.", "location": "شاطئ القرم، مسقط، سلطنة عُمان", "privacy": "الخصوصية", "back": "العودة للأعلى",
+        "footer": "حيث يلتقي التعليم بالموسيقى والفنون في مسقط.", "location": "شاطئ القرم، مسقط، سلطنة عُمان", "top_location": "مسقط، سلطنة عُمان", "privacy": "الخصوصية", "back": "العودة للأعلى",
         "illustrative": "صورة توضيحية وليست لمقر الأكاديمية", "read": "اقرأ الخبر", "source": "المصدر الرسمي", "learn": "اعرف المزيد", "all": "عرض جميع البرامج",
     },
     "en": {
         "brand": "Muscat Music & Art Academy", "tag": "أكاديمية مسقط للموسيقى والفنون", "apply": "Enquire about joining", "skip": "Skip to content",
-        "footer": "Where learning meets music and art in Muscat.", "location": "Shatti Al Qurum, Muscat, Oman", "privacy": "Privacy", "back": "Back to top",
+        "footer": "Where learning meets music and art in Muscat.", "location": "Shatti Al Qurum, Muscat, Oman", "top_location": "Muscat, Oman", "privacy": "Privacy", "back": "Back to top",
         "illustrative": "Illustrative image; not the academy premises", "read": "Read story", "source": "Official source", "learn": "Learn more", "all": "Explore all programmes",
     },
 }
@@ -61,7 +61,7 @@ def page_head(page, lang, title, description):
 <link rel="icon" type="image/png" sizes="32x32" href="/{asset}/favicon-transparent-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/{asset}/apple-touch-transparent-180.png"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/styles.css?v=20261119d">
 <link rel="alternate" hreflang="ar" href="{BASE}/{path(page,'ar')}"><link rel="alternate" hreflang="en" href="{BASE}/{path(page,'en')}">
 <script defer src="/site.js"></script></head><body>
-<a class="skip" href="#main">{t['skip']}</a><div class="utility"><div class="container"><span>{t['location']}</span><a href="mailto:info@muscatmusicartacademy.com">info@muscatmusicartacademy.com</a></div></div>
+<a class="skip" href="#main">{t['skip']}</a><div class="utility"><div class="container"><span>{t['top_location']}</span><a href="mailto:info@muscatmusicartacademy.com">info@muscatmusicartacademy.com</a></div></div>
 <header class="site-header" id="top"><div class="container header-row">
 <a class="identity" href="/{path('index',lang)}" aria-label="{t['brand']}"><img src="/assets/academy-emblem.webp" alt=""><span><strong>{t['brand']}</strong><small>{t['tag']}</small></span></a>
 <button class="menu-button" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="{'القائمة' if lang=='ar' else 'Menu'}"><span></span><span></span><span></span></button>
