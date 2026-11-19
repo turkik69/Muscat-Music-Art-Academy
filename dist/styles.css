@@ -10,3 +10,52 @@ html[lang=en] .hero-copy{padding:80px 0 35px 8%}html[lang=en] .discipline>div:la
 .founder-image{align-items:center;padding:32px}
 .portrait-photo{position:relative;z-index:1;width:min(100%,430px);aspect-ratio:4/5;flex:none;background:#b49b80 url('/assets/founder-original.jpg') 83% 33%/350% auto no-repeat;border-radius:215px 215px 12px 12px;box-shadow:0 24px 45px #4d3c2c38,0 0 0 6px #fff7e9aa;overflow:hidden}
 @media(max-width:600px){.founder-image{padding:28px}.portrait-photo{width:min(100%,340px)}}
+
+/* Flexible layout for phones and tablets in both orientations. */
+.hero-copy,.hero-image,.founder-text,.discipline>div,.contact-layout>div,.enquiry-grid>div{min-width:0}
+.hero h1,.page-banner h1,.founder-text h2,.section-intro h2{overflow-wrap:break-word}
+.menu-button{min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.language{min-height:44px;display:inline-flex;align-items:center}
+.enquiry-grid input,.enquiry-grid select,.enquiry-grid textarea{font-size:16px}
+@media(max-width:900px){
+  .news-teaser-row{flex-direction:column;align-items:stretch;gap:20px}
+  .news-teaser .text-arrow{align-self:flex-start;white-space:normal}
+  .admission-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .site-nav{max-height:calc(100dvh - 72px);overflow-y:auto;overscroll-behavior:contain}
+}
+@media(max-width:600px){
+  .admission-steps{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(42px,13vw,58px)}
+  .page-banner h1{font-size:clamp(32px,9vw,40px)}
+  .section-intro h2,.founder-text h2{font-size:clamp(29px,8vw,36px)}
+  .hero-actions{gap:16px}
+  .hero-actions .btn{width:100%}
+  .news-card,.story{padding:24px}
+  .founder-image,.founder-page .founder-image{min-height:0}
+  .portrait-photo{width:min(100%,340px)}
+}
+@media(max-width:420px){
+  .header-row{gap:8px}
+  .identity{min-width:0;gap:6px}
+  .identity img{width:43px;height:43px;flex:none}
+  .identity strong{max-width:122px;line-height:1.35}
+  .identity small{display:none}
+  .header-tools{gap:8px}
+  .menu-button{padding:8px}
+  .utility .container{min-height:30px}
+  .hero-index{letter-spacing:.1em;gap:9px}
+  .founder-image{padding:24px}
+  .timeline li{grid-template-columns:70px minmax(0,1fr);gap:10px}
+}
+@media(max-width:900px) and (max-height:520px) and (orientation:landscape){
+  .hero-inner{grid-template-columns:1fr 1fr;gap:22px;min-height:0}
+  .hero-copy,html[lang=en] .hero-copy{padding:25px 0}
+  .hero h1{font-size:clamp(35px,5.7vw,54px);margin:10px 0}
+  .hero-copy>p{font-size:14px;line-height:1.65}
+  .hero-actions{margin-top:16px;gap:12px}
+  .hero-actions .btn{width:auto;min-height:44px;padding:8px 13px}
+  .hero-index{padding-top:18px}
+  .hero-image{margin:20px 0}
+  .hero-image img{height:min(75svh,370px);min-height:0}
+  .section{padding:55px 0}
+}
