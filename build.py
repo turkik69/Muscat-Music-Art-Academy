@@ -86,7 +86,7 @@ def founder_feature(lang, compact=False):
         kicker='FOUNDER & CHIEF EXECUTIVE OFFICER'; name='H.E. Dr Sharifa bint Khalfan bin Nasser Al Yahyai'; role='Former Minister of Social Development · Omani academic and researcher'
         bio='Dr Sharifa has led Muscat Music & Art Academy since its founding in 2019. Her career spans education, research and national service, with a focus on creating opportunities for emerging artistic talent.'
         cta='Meet the founder'; alt='Portrait of Dr Sharifa Al Yahyai'
-    return f'''<div class="founder-feature {'compact' if compact else ''}"><div class="founder-image"><div class="portrait-ring"></div><div class="portrait-photo" role="img" aria-label="{alt}"></div></div><div class="founder-text"><span class="eyebrow">{kicker}</span><h2>{name}</h2><p class="founder-role">{role}</p><p>{bio}</p>{link('about',lang,cta,'text-arrow') if compact else ''}</div></div>'''
+    return f'''<div class="founder-feature {'compact' if compact else ''}"><div class="founder-image"><div class="portrait-photo"><img src="/assets/founder-cutout.webp" alt="{alt}" loading="lazy" width="1314" height="1197"></div></div><div class="founder-text"><span class="eyebrow">{kicker}</span><h2>{name}</h2><p class="founder-role">{role}</p><p>{bio}</p>{link('about',lang,cta,'text-arrow') if compact else ''}</div></div>'''
 
 def home(lang):
     t=TEXT[lang]
