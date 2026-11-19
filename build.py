@@ -58,7 +58,7 @@ def page_head(page, lang, title, description):
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#17211f"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="أكاديمية مسقط">
 <meta name="description" content="{escape(description,quote=True)}"><title>{escape(title)} | {t['brand']}</title>
 <meta property="og:type" content="website"><meta property="og:title" content="{escape(title,quote=True)} | {escape(t['brand'],quote=True)}"><meta property="og:description" content="{escape(description,quote=True)}"><meta property="og:image" content="{BASE}/assets/academy-emblem.webp">
-<link rel="icon" type="image/png" sizes="32x32" href="/{asset}/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/{asset}/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/styles.css?v=20261119d">
+<link rel="icon" type="image/png" sizes="32x32" href="/{asset}/favicon-transparent-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/{asset}/apple-touch-transparent-180.png"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/styles.css?v=20261119d">
 <link rel="alternate" hreflang="ar" href="{BASE}/{path(page,'ar')}"><link rel="alternate" hreflang="en" href="{BASE}/{path(page,'en')}">
 <script defer src="/site.js"></script></head><body>
 <a class="skip" href="#main">{t['skip']}</a><div class="utility"><div class="container"><span>{t['location']}</span><a href="mailto:info@muscatmusicartacademy.com">info@muscatmusicartacademy.com</a></div></div>
@@ -219,8 +219,8 @@ for lang in ("ar","en"):
     "short_name":"أكاديمية مسقط", "start_url":"/", "scope":"/", "display":"standalone",
     "background_color":"#17211f", "theme_color":"#17211f", "lang":"ar",
     "icons":[
-        {"src":"/assets/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
-        {"src":"/assets/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}
+        {"src":"/assets/icon-transparent-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+        {"src":"/assets/icon-transparent-512.png","sizes":"512x512","type":"image/png","purpose":"any"}
     ]
 },ensure_ascii=False,indent=2),encoding="utf-8")
 (DIST/"404.html").write_text(page_head("index","ar","الصفحة غير موجودة","الصفحة المطلوبة غير متاحة.")+
