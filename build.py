@@ -58,7 +58,7 @@ def page_head(page, lang, title, description):
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#17211f"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="أكاديمية مسقط">
 <meta name="description" content="{escape(description,quote=True)}"><title>{escape(title)} | {t['brand']}</title>
 <meta property="og:type" content="website"><meta property="og:title" content="{escape(title,quote=True)} | {escape(t['brand'],quote=True)}"><meta property="og:description" content="{escape(description,quote=True)}"><meta property="og:image" content="{BASE}/assets/academy-emblem.webp">
-<link rel="icon" type="image/png" sizes="32x32" href="/{asset}/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/{asset}/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/styles.css?v=20261119b">
+<link rel="icon" type="image/png" sizes="32x32" href="/{asset}/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/{asset}/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/styles.css?v=20261119c">
 <link rel="alternate" hreflang="ar" href="{BASE}/{path(page,'ar')}"><link rel="alternate" hreflang="en" href="{BASE}/{path(page,'en')}">
 <script defer src="/site.js"></script></head><body>
 <a class="skip" href="#main">{t['skip']}</a><div class="utility"><div class="container"><span>{t['location']}</span><a href="mailto:info@muscatmusicartacademy.com">info@muscatmusicartacademy.com</a></div></div>
@@ -79,7 +79,7 @@ def section_intro(kicker, title, summary=""):
 
 def founder_feature(lang, compact=False):
     if lang=='ar':
-        kicker='المؤسس والرئيس التنفيذي'; name='معالي الدكتورة شريفة بنت خلفان بن ناصر اليحيائية'; role='وزيرة التنمية الاجتماعية سابقًا · أكاديمية وباحثة عُمانية'
+        kicker='المؤسس والرئيس التنفيذي'; name='<span class="founder-honorific">معالي الدكتورة</span> <span class="founder-full-name">شريفة بنت خلفان بن ناصر اليحيائية</span>'; role='وزيرة التنمية الاجتماعية سابقًا · أكاديمية وباحثة عُمانية'
         bio='تقود الدكتورة شريفة أكاديمية مسقط للموسيقى والفنون منذ تأسيسها عام 2019. تمتد مسيرتها بين التعليم والبحث والعمل الوطني، وتضع تنمية المواهب الفنية في صميم رحلة الأكاديمية.'
         cta='اقرأ سيرة المؤسس'; alt='صورة شخصية للدكتورة شريفة اليحيائية'
     else:

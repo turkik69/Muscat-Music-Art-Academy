@@ -67,3 +67,6 @@ html[lang=en] .hero-copy{padding:80px 0 35px 8%}html[lang=en] .discipline>div:la
 .portrait-photo img{position:absolute;inset:auto 0 0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center bottom;filter:none}
 @media(max-width:600px){.founder-image,.founder-page .founder-image{min-height:0;aspect-ratio:1.12;padding:25px}.portrait-photo{width:min(100%,340px);border-width:5px;box-shadow:0 12px 28px #6f59422b,0 0 0 13px #fffaf140}}
 @media(max-width:420px){.founder-image,.founder-page .founder-image{padding:20px}.portrait-photo{width:min(100%,310px)}}
+
+/* Keep the founder's full given name and family name together on phones. */
+@media(max-width:600px){html[lang=ar] .founder-text h2 .founder-honorific,html[lang=ar] .founder-text h2 .founder-full-name{display:block}html[lang=ar] .founder-text h2 .founder-honorific{font-size:clamp(22px,6vw,30px)}html[lang=ar] .founder-text h2 .founder-full-name{font-size:clamp(14px,4.5vw,21px);white-space:nowrap;letter-spacing:-.045em}}
